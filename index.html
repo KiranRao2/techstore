@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>eBook Store</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            /* background-color: #a3acb0;  */
+            color: #333;
+        }
+
+        header {
+            background: rgb(230, 71, 26);
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            background-color: #d7d3d3;
+        }
+
+        /* Main Content */
+        .container {
+            width: 80%;
+            margin: 2rem auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .book-card {
+            background-color: #fff;
+            border: 1px solid #e9a4a4;
+            border-radius: 5px;
+            width: 30%;
+            margin: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 32);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .book-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .book-info {
+            padding: 1rem;
+        }
+
+        .book-info h3 {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        .book-info p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #f37d5d;
+        }
+
+        button {
+            background-color: #f37d5d;
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            /* background-color: #e06655; */
+            background-color: #32d242;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        #aa{
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Media Queries for responsive design */
+        @media (max-width: 768px) {
+            .book-card {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .book-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+       <h1>Welcome to Tech eBook Store</h1> 
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Best Sellers</a>
+        <a href="#">New Releases</a>
+        <a href="#">Contact Us</a>
+    </nav>
+    <h1 style="text-align: center; color: rgb(255, 147, 47); font-family: 'Courier New', Courier, monospace; background-color: yellow;">100% Guaranteed placement when you learn these Technologies </h1>
+    <marquee behavior="scroll" direction="left" scrollamount="10">
+        <img src="img/pylogo.png"   alt="Tech Image 1"  height="160px"  width="130px">
+        <img src="img/javalogo.jpg" alt="Tech Image 2"  height="160px"  width="130px">
+        <img src="img/htmllogo.png" alt="Tech Image 3"  height="160px"  width="130px">
+        <img src="img/clogo.png"    alt="Tech Image 4"  height="160px"  width="130px">
+        <img src="img/jslogo.png"   alt="Tech Image 5"  height="160px"  width="130px">
+        <img src="img/sqllogo.png"  alt="Tech Image 6"  height="160px"  width="130px">
+        <img src="img/leetlogo.png"  alt="Tech Image 5"  height="160px"  width="130px">
+        <img src="img/servletlogo.png"  alt="Tech Image 5"  height="160px"  width="130px">
+        <img src="img/djangologo.png"  alt="Tech Image 5"  height="160px"  width="130px">
+        <img src="img/hibernatelogo.png"   alt="Tech Image 1"  height="200px"  width="200px">
+        <img src="img/javalogo.jpg" alt="Tech Image 2"  height="160px"  width="130px">
+        <img src="img/htmllogo.png" alt="Tech Image 3"  height="160px"  width="130px">
+        <img src="img/clogo.png"    alt="Tech Image 4"  height="160px"  width="130px">
+        <img src="img/jslogo.png"   alt="Tech Image 5"  height="160px"  width="130px">
+        <img src="img/sqllogo.png"  alt="Tech Image 6"  height="160px"  width="130px">
+        <img src="img/leetlogo.png"  alt="Tech Image 5"  height="160px"  width="130px">
+        <img src="img/servletlogo.png"  alt="Tech Image 5"  height="160px"  width="130px">
+        <img src="img/djangologo.png"  alt="Tech Image 5"  height="160px"  width="130px">
+    </marquee>
+
+    <div class="container">
+      <!-- C programming Book 1 -->
+      <div class="book-card">
+        <img src="img/c.PNG" alt="Book 2">
+        <div class="book-info">
+            <h3>C Programming</h3>
+            <p>Covers all the topics required for placements.</p>
+            <p class="price">59rs Only</p>
+            <button><a id="aa" href="https://rzp.io/rzp/clanguage1">Explore more</a></button>
+        </div>
+    </div>
+
+        <!-- Core Python Book 2 -->
+         <div class="book-card">
+            <img src="img/pyy.PNG" alt="Book 2">
+            <div class="book-info">
+                <h3>Core Python</h3>
+                <p>Covers all the topics required for placements.</p>
+                <p class="price">69rs Only</p>
+                <button><a id="aa" href="https://rzp.io/rzp/corepython1">Explore more</a></button>
+            </div>
+        </div>
+
+        <!-- Advance Python Book 3 -->
+        <div class="book-card">
+            <img src="img/advpy.PNG" alt="Book 3">
+            <div class="book-info">
+                <h3>Advance Python</h3>
+                <p>Advance concepts of python is covered with programs.</p>
+                <p class="price">69rs Only</p>
+                <button><a id="aa" href="https://rzp.io/rzp/advancepy2">Explore more</a></button>
+            </div>
+        </div>
+        
+
+        
+        <!-- SQL Book 4 ------- -->
+        <div class="book-card">
+            <img src="img/sql.PNG" alt="Book 3">
+            <div class="book-info">
+                <h3>SQL-Database</h3>
+                <p>All SQL concepts related to placements are covered along with 300+ queries </p>
+                <p class="price">200rs Only</p>
+                <button><a id="aa" href="https://pages.razorpay.com/dbms2sql">Explore more</a></button>
+            </div>
+        </div>
+
+               <!-- HTML5 Book 5 -->
+               <div class="book-card">
+                <img src="img/html.png" alt="Book 3">
+                <div class="book-info">
+                    <h3>HTML5</h3>
+                    <p>All HTML5 concepts along with code is available. </p>
+                    <p class="price">39rs Only</p>
+                    <button><a id="aa" href="https://pages.razorpay.com/newHtml5">Explore more</a></button>
+                </div>
+            </div>
+
+        <!--CSS Book 6 -->
+        <div class="book-card">
+            <img src="img/css.PNG" alt="Book 3">
+            <div class="book-info">
+                <h3>CSS3</h3>
+                <p>All CSS3 concepts along with code is available. </p>
+                <p class="price">29rs Only</p>
+                <button><a id="aa" href="https://rzp.io/rzp/CSS3">Explore more</a></button>
+            </div>
+        </div>
+
+
+         <!--Java LeetCOde Solution Book 6 -->
+            <div class="book-card">
+                <img src="img/JAVALEET.JPG" alt="Book 3">
+                  <div class="book-info">
+                    <h3>Java LeetCode Solutions</h3>
+                    <p>All Java Leetcode Solutions with Easy Understandable approaches are available. </p>
+                    <p class="price">299rs Only</p>
+                    <button><a id="aa" href="https://rzp.io/rzp/javaLeetcode">Explore more</a></button>
+                  </div>
+             </div>
+
+
+         <!--Java Programs part-I with Solution Book 6 -->
+         <div class="book-card">
+            <img src="img/Capture.JPG" alt="Book 3">
+              <div class="book-info">
+                <h3>Java Programs part-I with Solution</h3>
+                <p>100+ Java Programs with Easy Understandable approaches are available. </p>
+                <p class="price">299rs Only</p>
+                <button><a id="aa" href="https://rzp.io/rzp/javapro-1">Explore more</a></button>
+              </div>
+         </div>
+
+                <!--Java Programs part-II with Solution Book 7 -->
+                <div class="book-card">
+                    <img src="img/Capture.JPG" alt="Book 3">
+                      <div class="book-info">
+                        <h3>Java Programs part-II with Solution</h3>
+                        <p>100+ Java Programs with Easy Understandable approaches are available. </p>
+                        <p class="price">299rs Only</p>
+                        <button><a id="aa" href="https://rzp.io/rzp/javapro-II">Explore more</a></button>
+                      </div>
+                </div>
+
+                <!--Java Notes-->
+                <div class="book-card">
+                    <img src="img/jav.JPG" alt="Book 3">
+                      <div class="book-info">
+                        <h3>Core Java Complete Notes with real-time programs</h3>
+<p> 
+<pre>
+1.Complete Java   
+2.Exception Handling
+3.File Handling
+4.JVM Architecture
+</pre>
+                        </p>
+                        <p class="price">299rs Only</p>
+                        <button><a id="aa" href="https://rzp.io/rzp/core-Java1">Explore more</a></button>
+                      </div>
+                </div>   
+
+
+    </div>
+
+    <footer>
+        <p>&copy; Latest eBook Store. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>
